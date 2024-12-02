@@ -2,20 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Custom Text Styles */
+.text-primary {
+  color: theme("colors.primary");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.text-secondary {
+  color: theme("colors.secondary");
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.text-light {
+  color: theme("colors.textLight");
+}
+
+.text-dark {
+  color: theme("colors.textDark");
+}
+
+/* Global Background */
+.bg-main {
+  background-color: theme("colors.background");
+}
+
+/* Card Styling */
+.card {
+  @apply bg-cardBg rounded-lg shadow-custom-dark hover:shadow-custom-light transition-shadow;
+}
+
+/* Button Styling */
+.btn {
+  @apply px-4 py-2 rounded-lg text-white transition;
+}
+
+.btn-primary {
+  @apply bg-primary hover:bg-red-600;
 }
